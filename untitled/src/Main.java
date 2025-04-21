@@ -117,18 +117,18 @@ public class Main {
 
     }
 
-    public static Vehicle inputVehicle(Scanner sc, String id, int choise) {
+    public static Vehicle inputVehicle(Scanner sc, String id, int choice) {
         System.out.print("Nhập hãng xe: ");
         String brand = sc.nextLine();
 
         System.out.print("Nhập năm sản xuất: ");
         int year = sc.nextInt();
 
-        if (choise == CHOICE_MOTORBIKE) {
+        if (choice == CHOICE_MOTORBIKE) {
             System.out.print("Nhập công suất động cơ: ");
             int enginePower = sc.nextInt();
             return new Motorbike(id, brand, year, enginePower);
-        } else if (choise == CHOICE_CAR) {
+        } else if (choice == CHOICE_CAR) {
             System.out.print("Nhập số chỗ ngồi: ");
             int numberOfSeats = sc.nextInt();
             return new Car(id, brand, year, numberOfSeats);
